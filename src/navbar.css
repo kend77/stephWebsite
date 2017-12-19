@@ -13,6 +13,15 @@
 	width: 100%;
 }
 
+.nav-item {
+	opacity: .6;
+}
+
+.nav-item:hover {
+	opacity: 1;
+	font-weight: 550;
+	font-size: 125%;
+}
 
 
 @media (max-width: 750px) {

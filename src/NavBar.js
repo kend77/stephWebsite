@@ -5,15 +5,15 @@ const NavBar = () => {
 	<div id="navbar">
 	<h1>Stephanie Diaz</h1>
 	<ul id="nav-options">
-		<li onClick={() => console.log('hello')}>schumacher</li>
+		<li className="nav-item">schumacher</li>
+		<li >|</li>
+		<li className="nav-item">architectural digest</li>
 		<li>|</li>
-		<li>architectural digest</li>
+		<li className="nav-item">self</li>
 		<li>|</li>
-		<li>self</li>
+		<li className="nav-item">downtown</li>
 		<li>|</li>
-		<li>downtown</li>
-		<li>|</li>
-		<li>about</li>
+		<li className="nav-item">about</li>
 	</ul>
 	</div>
 	)
