@@ -1,0 +1,21 @@
+#carousel {
+  margin: auto;
+  padding-top: 40px;
+  width: 80%;
+  color: #333;
+}
+
+.carousel-item {
+  height: 20%;
+}
+
+.images {
+  width: 40%;
+  height: auto;
+  margin: auto;
+}
+
+.custom-page {
+  width: 20px;
+  height: auto;
+}

@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-
 import NavBar from './NavBar'
+
 class App extends Component {
   render() {
+    const { children } = this.props
     return (
-    <NavBar />
+    <div>
+      <NavBar />
+    { children }
+    </div>
 	);
   }
 }
