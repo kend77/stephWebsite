@@ -2,19 +2,21 @@ import React, { Component } from 'react'
 import Slider from 'react-slick'
 import './carousel.css'
 import { withRouter } from 'react-router'
-import LoaderComponent from './Loader'
+import { Modal, Image } from 'semantic-ui-react'
 
 class Carousel extends Component {
 
-  componentDidMount() {
-    document.addEventListener('loadeddata', () => {
-      console.log('hello')
-    })
+  constructor() {
+    super()
+    this.state = {
+      slideNumber: 0,
+      currentSlide: 0
+    }
   }
 
   render() {
     const { folder } = this.props;
-
+    const { slideNumber, currentSlide } = this.state;
 
     document.title = `stephanie diaz-${folder}`;
 
@@ -41,15 +43,31 @@ class Carousel extends Component {
       autoplaySpeed: 3500,
       fade: true,
       pauseOnHover: false,
-      arrows: false
+      arrows: false,
+      afterChange: (index) => {
+        this.setState({ slideNumber : index })
+      }
     };
-
     return (
       <div id="carousel">
         <Slider {...settings} className="carousel-item">
           {[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18].map(picNumber => {
             return (
-              <div key={picNumber} className="pic-container"><img className="images" src={`/images/${folder}/${picNumber}.jpg`} alt=""/></div>
+              <div key={picNumber} className="pic-container" >
+                <Modal
+                dimmer='blurring'
+                trigger={
+                <img
+                onClick={() => this.setState({ currentSlide: slideNumber })}
+                className="images"
+                src={`/images/${folder}/${picNumber}.jpg`}
+                alt=""/>}
+                >
+                  <Image
+                  src={`/images/${folder}/${currentSlide + 1}.jpg`}
+                  />
+                </Modal>
+              </div>
             )
           })}
         </Slider>
