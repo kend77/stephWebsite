@@ -2,11 +2,19 @@ import React, { Component } from 'react'
 import Slider from 'react-slick'
 import './carousel.css'
 import { withRouter } from 'react-router'
+import LoaderComponent from './Loader'
 
 class Carousel extends Component {
 
+  componentDidMount() {
+    document.addEventListener('loadeddata', () => {
+      console.log('hello')
+    })
+  }
+
   render() {
     const { folder } = this.props;
+
 
     document.title = `stephanie diaz-${folder}`;
 

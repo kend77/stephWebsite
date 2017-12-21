@@ -23,7 +23,7 @@
 #logo {
 	margin-bottom: 5%;
 	margin-top: 8%;
-	font-size: 3em;
+	font-size: 2.7em;
 }
 
 .nav-item {
@@ -31,12 +31,22 @@
 	text-decoration: none;
 	color: rgb(80,80,80);
 	margin-right: 1em;
+	font-size: 125%;
+}
+
+.nav-item-separator {
+
+	text-decoration: none;
+	color: rgb(80,80,80);
+	margin-right: 1em;
+	font-size: 125%;
 }
 
 .nav-item:hover {
 	opacity: 1;
 	font-weight: 550;
-	font-size: 125%;
+	font-size: 150%;
+	text-decoration: none;
 }
 
 
