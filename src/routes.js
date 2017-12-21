@@ -13,7 +13,10 @@ class Routes extends Component {
     return (
       <Router history={customHistory}>
         <App>
-        <Route path="/schumacher" render={() => <Carousel folder="schumacher" />} />
+          <Switch>
+            <Route path="/schumacher" render={() => <Carousel folder="schumacher" />} />
+            <Route path="/ad" render={() => <Carousel folder="ad" />} />
+          </Switch>
         </App>
       </Router>
     )

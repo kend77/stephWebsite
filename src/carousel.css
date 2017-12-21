@@ -3,19 +3,36 @@
   padding-top: 40px;
   width: 80%;
   color: #333;
+  margin-bottom: 60px;
 }
 
 .carousel-item {
   height: 20%;
 }
 
-.images {
-  width: 40%;
-  height: auto;
-  margin: auto;
+.pic-container {
+  height: 450px;
+  width: auto;
+  margin-bottom: 50px;
 }
 
-.custom-page {
-  width: 20px;
-  height: auto;
+.images {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
 }
+.custom-thumbnail {
+  width: auto;
+  height: 20px;
+}
+
+.thumbnail-image {
+  max-width: 100%;
+  max-height: 100%;
+  opacity: .6;
+}
+
+.thumbnail-image:hover {
+  opacity: 1;
+}
+
