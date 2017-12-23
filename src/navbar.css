@@ -36,7 +36,6 @@
 .nav-item:hover {
 	background-color: rgb(150,150,150);
 	color: rgb(255, 255, 255);
-	font-weight: 800;
 	opacity: 1;
 }
 

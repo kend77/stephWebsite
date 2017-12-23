@@ -44,8 +44,8 @@ class Carousel extends Component {
       fade: true,
       pauseOnHover: false,
       arrows: false,
-      afterChange: (index) => {
-        this.setState({ slideNumber : index })
+      beforeChange: (oldIndex, newIndex) => {
+        this.setState({ slideNumber : newIndex })
       }
     };
     return (
@@ -55,7 +55,8 @@ class Carousel extends Component {
             return (
               <div key={picNumber} className="pic-container" >
                 <Modal
-                dimmer='blurring'
+
+                dimmer="blurring"
                 trigger={
                 <img
                 onClick={() => this.setState({ currentSlide: slideNumber })}
@@ -63,9 +64,12 @@ class Carousel extends Component {
                 src={`/images/${folder}/${picNumber}.jpg`}
                 alt=""/>}
                 >
+                <div style={{}}>
                   <Image
+                  className="modal-image"
                   src={`/images/${folder}/${currentSlide + 1}.jpg`}
                   />
+                  </div>
                 </Modal>
               </div>
             )

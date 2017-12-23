@@ -10,7 +10,7 @@ const NavBar = () => {
 	<ul id="nav-options">
 		<NavLink className="nav-item" to="/schumacher"><li>schumacher</li></NavLink>
 		<li className="nav-item-separator">|</li>
-		<NavLink className="nav-item" to="/authentics"><li>the authentics</li></NavLink>
+		<NavLink className="nav-item" to="/theauthentics"><li>the authentics</li></NavLink>
 		<li className="nav-item-separator">|</li>
 		<NavLink className="nav-item" to="/self"><li>self</li></NavLink>
 		<li className="nav-item-separator">|</li>
