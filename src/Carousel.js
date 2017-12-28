@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Slider from 'react-slick'
 import './carousel.css'
 import { withRouter } from 'react-router'
@@ -64,12 +65,12 @@ class Carousel extends Component {
                 src={`/images/${folder}/${picNumber}.jpg`}
                 alt=""/>}
                 >
-                <div style={{}}>
+                <Modal.Content className="modal-image-container" style={{display: 'flex', justifyContent: 'center', alignContent: 'center'}}>
                   <Image
-                  className="modal-image"
+                  style={{maxWidth: '100%', maxHeight: '100%'}}
                   src={`/images/${folder}/${currentSlide + 1}.jpg`}
                   />
-                  </div>
+                </Modal.Content>
                 </Modal>
               </div>
             )
@@ -81,3 +82,7 @@ class Carousel extends Component {
 }
 
 export default withRouter(Carousel);
+
+Carousel.propTypes = {
+  folder: PropTypes.string.isRequired
+}
