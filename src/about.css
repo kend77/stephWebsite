@@ -1,0 +1,28 @@
+#about {
+  display: flex;
+  justify-content: center;
+  padding: 2vw;
+}
+#bio-container {
+  box-sizing: border-box;
+  width: 384px;
+  margin-left: 2vw;
+  padding-top: 10vh;
+}
+
+#bio {
+  font-size: 130%;
+}
+
+#potrait-container {
+  height: 575px;
+  width: auto;
+  margin-right: 2vw;
+  padding: 1vh;
+}
+
+#potrait {
+  max-width: 100%;
+  max-height: 100%;
+}
+

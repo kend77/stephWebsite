@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "eslint": "^4.13.1",
+    "eslint-config-fullstack": "^3.0.0",
+    "eslint-plugin-react": "^7.5.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router": "^4.2.0",
