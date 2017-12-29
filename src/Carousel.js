@@ -67,7 +67,7 @@ class Carousel extends Component {
                 >
                 <Modal.Content className="modal-image-container" style={{display: 'flex', justifyContent: 'center', alignContent: 'center'}}>
                   <Image
-                  style={{maxWidth: '100%', maxHeight: '100%'}}
+                  style={{maxWidth: '100%', maxHeight: '100%', margin: 'auto'}}
                   src={`/images/${folder}/${currentSlide + 1}.jpg`}
                   />
                 </Modal.Content>

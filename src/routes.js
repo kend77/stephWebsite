@@ -3,6 +3,7 @@ import { Router } from 'react-router'
 import { Route, Switch } from 'react-router-dom';
 import App from './App'
 import Carousel from './Carousel'
+import About from './About'
 import createBrowserHistory from 'history/createBrowserHistory'
 const customHistory = createBrowserHistory();
 
@@ -16,6 +17,7 @@ class Routes extends Component {
           <Switch>
             <Route path="/schumacher" render={() => <Carousel folder="schumacher" />} />
             <Route path="/ad" render={() => <Carousel folder="ad" />} />
+            <Route path="/about" component={About} />
           </Switch>
         </App>
       </Router>
