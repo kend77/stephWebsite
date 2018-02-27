@@ -66,4 +66,7 @@
 	#nav-options {
 		display: none;
 	}
+	#sidebar {
+		background: rgb(80,80,80);
+	}
 }

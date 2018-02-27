@@ -12,8 +12,15 @@ class MobileNavBar extends Component {
     }
   }
   componentDidMount() {
-    document.addEventListener('click', (event) => {
-      console.log(event.target.id)
+    // document.addEventListener('click', (event) => {
+
+    //   if (event.target.id !== 'sidebar' && event.target.id !== 'hamburger') {
+    //     this.setState({visible: false})
+    //   }
+    // })
+
+    document.addEventListener('touchstart', (event) => {
+
       if (event.target.id !== 'sidebar' && event.target.id !== 'hamburger') {
         this.setState({visible: false})
       }
@@ -27,23 +34,33 @@ class MobileNavBar extends Component {
     <div id="navbar">
         <Icon id="hamburger" onClick={this.toggleVisibility} size="big" name="bars" />
         <NavLink id="header" to="/"><h1 id="logo">Stephanie Diaz</h1></NavLink>
-        <Sidebar id="sidebar" as={Menu} animation="push" width="thin" visible={visible} icon="labeled" vertical inverted>
+        <Sidebar id="sidebar" as={Menu} animation="overlay" width="thin" visible={visible} icon="labeled" vertical inverted>
           <NavLink to="/schumacher">
           <Menu.Item name="home">
-            <Icon name="home" />
-            Schumacher
+            schumacher
           </Menu.Item>
           </NavLink>
-          <Menu.Item name="gamepad">
-            <Icon name="gamepad" />
-            Games
+          <NavLink to="/theauthentics">
+          <Menu.Item name="home">
+            theauthentics
           </Menu.Item>
-          <Menu.Item name="camera">
-            <Icon name="camera" />
-            Channels
+          </NavLink>
+          <NavLink to="/self">
+          <Menu.Item name="home">
+            self
           </Menu.Item>
+          </NavLink>
+          <NavLink to="/ad">
+          <Menu.Item name="home">
+            architetural digest
+          </Menu.Item>
+          </NavLink>
+          <NavLink to="/about">
+          <Menu.Item name="home">
+            about
+          </Menu.Item>
+          </NavLink>
         </Sidebar>
-
     </div>
     )
   }

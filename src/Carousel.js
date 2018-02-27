@@ -13,14 +13,19 @@ class Carousel extends Component {
       slideNumber: 0,
       currentSlide: 0
     }
+    this.onOpen = this.onOpen.bind(this)
   }
 
+  onOpen() {
+    document.addEventListener('touchstart', () => {
+      var event = new KeyboardEvent('keydown', {'key': 'Escape'})
+      document.dispatchEvent(event)
+    })
+  }
   render() {
     const { folder } = this.props;
-    const { slideNumber, currentSlide } = this.state;
-
+    const { slideNumber, currentSlide, open } = this.state;
     document.title = `stephanie diaz-${folder}`;
-
     const settings = {
       customPaging: (i) => {
         return (
@@ -45,25 +50,28 @@ class Carousel extends Component {
       fade: true,
       pauseOnHover: false,
       arrows: false,
+      swipeToSlide: true,
+      touchMove: true,
       beforeChange: (oldIndex, newIndex) => {
-        this.setState({ slideNumber : newIndex })
+        this.setState({ slideNumber: newIndex })
       }
     };
+
     return (
       <div id="carousel">
         <Slider {...settings} className="carousel-item">
-          {[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18].map(picNumber => {
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18].map(picNumber => {
             return (
               <div key={picNumber} className="pic-container" >
                 <Modal
-
                 dimmer="blurring"
+                onOpen={this.onOpen}
                 trigger={
                 <img
                 onClick={() => this.setState({ currentSlide: slideNumber })}
                 className="images"
                 src={`/images/${folder}/${picNumber}.jpg`}
-                alt=""/>}
+                alt="" />}
                 >
                 <Modal.Content className="modal-image-container" style={{display: 'flex', justifyContent: 'center', alignContent: 'center'}}>
                   <Image

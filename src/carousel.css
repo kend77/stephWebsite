@@ -45,3 +45,36 @@
   max-width: 100%;
   max-height: 100%;
 }
+
+
+@media (max-width: 750px) {
+  #carousel {
+    margin: auto;
+    padding-top: 15vh;
+    width: 90%;
+    color: #333;
+
+  }
+  .pic-container {
+    height: 50vh;
+    width: auto;
+    margin-bottom: 5vh;
+  }
+
+  .custom-thumbnail {
+    width: auto;
+    height: 20px;
+  }
+
+  .thumbnail-image {
+    max-width: 125%;
+    max-height: 100%;
+    opacity: .6;
+  }
+  .modal-image-container {
+    height: 40vh;
+    width: auto;
+    margin: auto;
+  }
+
+}

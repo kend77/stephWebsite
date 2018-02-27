@@ -5,14 +5,37 @@ import App from './App'
 import Carousel from './Carousel'
 import About from './About'
 import createBrowserHistory from 'history/createBrowserHistory'
+import MobileApp from './MobileApp';
+
 const customHistory = createBrowserHistory();
 
-
-
 class Routes extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      width: window.innerWidth
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', () => {
+      this.setState({width: window.innerWidth})
+    })
+  }
+
   render() {
+    const { width } = this.state
     return (
       <Router history={customHistory}>
+      { width < 750 ?
+        <MobileApp>
+          <Switch>
+            <Route path="/schumacher" render={() => <Carousel folder="schumacher" />} />
+            <Route path="/ad" render={() => <Carousel folder="ad" />} />
+            <Route path="/about" component={About} />
+          </Switch>
+        </MobileApp>
+        :
         <App>
           <Switch>
             <Route path="/schumacher" render={() => <Carousel folder="schumacher" />} />
@@ -20,6 +43,7 @@ class Routes extends Component {
             <Route path="/about" component={About} />
           </Switch>
         </App>
+      }
       </Router>
     )
   }
