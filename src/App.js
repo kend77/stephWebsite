@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import NavBar from './NavBar'
+import NavBarContainer from './NavBarContainer'
 
 class App extends Component {
+
   render() {
     document.title = 'stephanie diaz'
     const { children } = this.props
     return (
-    <div>
-      <NavBar />
+    <div id="app" >
+      <NavBarContainer />
     { children }
     </div>
 	);

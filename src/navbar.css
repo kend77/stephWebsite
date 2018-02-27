@@ -2,7 +2,6 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
 }
 
 #nav-options {
@@ -47,7 +46,23 @@
 	font-size: 125%;
 }
 
+
+
 @media (max-width: 750px) {
+	#navbar {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-top: 2vh;
+		margin-left: 3vw;
+		margin-right: 3vw;
+	}
+
+	#logo {
+		margin: 0;
+		font-size: 2em;
+		margin-left: 13vw;
+	}
 	#nav-options {
 		display: none;
 	}
