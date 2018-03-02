@@ -8,31 +8,27 @@ class MobileNavBar extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      visible: false
+      visible: false,
+      menuVisible: true
     }
   }
   componentDidMount() {
-    // document.addEventListener('click', (event) => {
-
-    //   if (event.target.id !== 'sidebar' && event.target.id !== 'hamburger') {
-    //     this.setState({visible: false})
-    //   }
-    // })
-
     document.addEventListener('touchstart', (event) => {
-
       if (event.target.id !== 'sidebar' && event.target.id !== 'hamburger') {
-        this.setState({visible: false})
+        this.setState({visible: false, menuVisible: true})
       }
     })
   }
-  toggleVisibility = () => this.setState({ visible: !this.state.visible })
+
+  toggleVisibility = () => this.setState({ visible: !this.state.visible, menuVisible: !this.state.menuVisible })
 
   render() {
-  const { visible } = this.state
+  const { visible, menuVisible } = this.state
   return (
     <div id="navbar">
-        <Icon id="hamburger" onClick={this.toggleVisibility} size="big" name="bars" />
+        {menuVisible ?
+        <Icon id="hamburger" onClick={this.toggleVisibility} size="big" name="bars" /> :
+        <Icon id="nohamburger" size="big" name="bars" />}
         <NavLink id="header" to="/"><h1 id="logo">Stephanie Diaz</h1></NavLink>
         <Sidebar id="sidebar" as={Menu} animation="overlay" width="thin" visible={visible} icon="labeled" vertical inverted>
           <NavLink to="/schumacher">

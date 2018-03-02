@@ -1,20 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import MobileNavBar from './MobileNavBar'
 
 
-class MobileApp extends Component {
-
-  render() {
+const MobileApp = (props) =>  {
 
     document.title = 'stephanie diaz'
-    const { children } = this.props
+    const { children } =  props
     return (
     <div id="app" >
     <MobileNavBar />
     { children }
     </div>
 	);
-  }
+
 }
 
 export default MobileApp;

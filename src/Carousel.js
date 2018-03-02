@@ -22,9 +22,10 @@ class Carousel extends Component {
       document.dispatchEvent(event)
     })
   }
+
   render() {
     const { folder } = this.props;
-    const { slideNumber, currentSlide, open } = this.state;
+    const { slideNumber, currentSlide } = this.state;
     document.title = `stephanie diaz-${folder}`;
     const settings = {
       customPaging: (i) => {
@@ -40,6 +41,7 @@ class Carousel extends Component {
           </div>
         );
       },
+      closeOnDocumentClick: true,
       dots: true,
       dotsClass: 'slick-dots slick-thumb',
       infinite: true,
@@ -49,7 +51,7 @@ class Carousel extends Component {
       autoplaySpeed: 3500,
       fade: true,
       pauseOnHover: false,
-      arrows: false,
+      arrows: true,
       swipeToSlide: true,
       touchMove: true,
       beforeChange: (oldIndex, newIndex) => {
@@ -77,6 +79,7 @@ class Carousel extends Component {
                   <Image
                   style={{maxWidth: '100%', maxHeight: '100%', margin: 'auto'}}
                   src={`/images/${folder}/${currentSlide + 1}.jpg`}
+                  className="oneimage"
                   />
                 </Modal.Content>
                 </Modal>

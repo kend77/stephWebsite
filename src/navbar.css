@@ -17,6 +17,8 @@
 #header {
 	text-decoration: none;
 	color: rgb(80,80,80);
+	margin: 0;
+	padding: 0;
 }
 
 #logo {
@@ -48,25 +50,65 @@
 
 
 
-@media (max-width: 750px) {
-	#navbar {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		margin-top: 2vh;
-		margin-left: 3vw;
-		margin-right: 3vw;
-	}
 
-	#logo {
-		margin: 0;
-		font-size: 2em;
-		margin-left: 13vw;
-	}
-	#nav-options {
-		display: none;
-	}
-	#sidebar {
-		background: rgb(80,80,80);
-	}
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+		#navbar {
+			display: flex;
+			flex-direction: row;
+			margin: 5vw 3vw 2vw;
+		}
+		#logo {
+			margin: 0;
+			padding: 0;
+			font-size: 2em;
+		}
+		#hamburger {
+			margin-right: 15%;
+		}
+		#nohamburger {
+			margin-right: 15%;
+			opacity: 0;
+		}
+		#nav-options {
+			display: none;
+		}
+		#sidebar {
+			background: rgb(80,80,80);
+			opacity: .95;
+			font-size: 1em;
+			padding: 4% 0%;
+		}
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+		#navbar {
+			display: flex;
+			flex-direction: row;
+			margin: 2vh 3vw;
+		}
+
+		#logo {
+			margin: 0;
+			padding: 0;
+			font-size: 2em;
+
+		}
+		#hamburger {
+			margin-right: 28%;
+		}
+		#nav-options {
+			display: none;
+		}
+		#sidebar {
+			background: rgb(80,80,80);
+		}
 }
