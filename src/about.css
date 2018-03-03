@@ -41,10 +41,11 @@
     #bio-container {
       box-sizing: border-box;
       width: 90%;
-      margin: 0 0 2vh;
+      margin: 0 0 1vh;
     }
     h2 {
       font-size: 140%;
+      margin: 0 0 1.5vh;
     }
     #bio {
       font-size: 102%;
@@ -52,12 +53,12 @@
     }
 
     #list {
-      margin-top: 2%;
+      margin-top: 2vh;
     }
 
     #potrait-container {
       height: auto;
-      width: 65%;
+      width: 58%;
       margin: 0;
       padding: 1vh;
     }
