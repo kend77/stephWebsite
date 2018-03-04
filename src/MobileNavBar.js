@@ -36,6 +36,11 @@ class MobileNavBar extends Component {
             schumacher
           </Menu.Item>
           </NavLink>
+          <NavLink to="/patterson">
+          <Menu.Item name="home">
+            patterson flynn martin
+          </Menu.Item>
+          </NavLink>
           <NavLink className="mobile-nav-item" to="/theauthentics">
           <Menu.Item name="home">
             the authentics
@@ -44,11 +49,6 @@ class MobileNavBar extends Component {
           <NavLink to="/self">
           <Menu.Item name="home">
             self
-          </Menu.Item>
-          </NavLink>
-          <NavLink to="/ad">
-          <Menu.Item name="home">
-            architetural digest
           </Menu.Item>
           </NavLink>
           <NavLink className="mobile-nav-item" to="/about">

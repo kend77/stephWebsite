@@ -31,7 +31,6 @@ class Routes extends Component {
         <MobileApp>
           <Switch>
             <Route path="/schumacher" render={() => <Carousel folder="schumacher" />} />
-            <Route path="/ad" render={() => <Carousel folder="ad" />} />
             <Route path="/about" component={About} />
           </Switch>
         </MobileApp>
@@ -39,7 +38,6 @@ class Routes extends Component {
         <App>
           <Switch>
             <Route path="/schumacher" render={() => <Carousel folder="schumacher" />} />
-            <Route path="/ad" render={() => <Carousel folder="ad" />} />
             <Route path="/about" component={About} width={width} />
           </Switch>
         </App>
