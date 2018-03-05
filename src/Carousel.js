@@ -53,7 +53,6 @@ class Carousel extends Component {
       fade: true,
       pauseOnHover: false,
       arrows: true,
-      swipeToSlide: true,
       touchMove: true,
       beforeChange: (oldIndex, newIndex) => {
         this.setState({ slideNumber: newIndex })
