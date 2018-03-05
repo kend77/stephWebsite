@@ -5,6 +5,7 @@ import './carousel.css'
 import { withRouter } from 'react-router'
 import { Modal, Image } from 'semantic-ui-react'
 
+
 class Carousel extends Component {
 
   constructor() {
@@ -61,7 +62,7 @@ class Carousel extends Component {
 
     return (
       <div id="carousel">
-        <Slider {...settings} className="carousel-item">
+        <Slider ref={c => {this.slider = c}} {...settings} className="carousel-item">
           {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18].map(picNumber => {
             return (
               <div key={picNumber} className="pic-container" >

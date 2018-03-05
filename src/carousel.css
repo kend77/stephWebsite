@@ -219,3 +219,38 @@
       opacity: .6;
     }
 }
+
+/* iPad Pro */
+/* Portrait */
+
+@media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .pic-container {
+      margin-bottom: 5vh;
+      height: 600px;
+      width: auto;
+    }
+}
+
+/* Landscape */
+
+@media only screen
+  and (min-device-width: 1366px)
+  and (max-device-width: 1366px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #carousel {
+      margin-top: 5%;
+      padding: 0;
+    }
+    .pic-container {
+      margin-bottom: 5vh;
+      height: 600px;
+      width: auto;
+    }
+
+}
