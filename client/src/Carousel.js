@@ -33,6 +33,7 @@ class Carousel extends Component {
   render() {
     const { folder } = this.props;
     const { slideNumber, currentSlide, numImages } = this.state;
+    console.log(numImages)
     document.title = `stephanie diaz-${folder}`;
     const settings = {
       customPaging: (i) => {
