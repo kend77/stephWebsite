@@ -20,6 +20,7 @@ class Carousel extends Component {
   componentDidMount() {
     axios.get(`/api/${this.props.folder}`)
       .then(res => {
+        console.log(res.data)
         this.setState({numImages: res.data.length})
       })
   }
@@ -59,7 +60,6 @@ class Carousel extends Component {
       autoplaySpeed: 3500,
       fade: true,
       pauseOnHover: false,
-      arrows: true,
       touchMove: true,
       beforeChange: (oldIndex, newIndex) => {
         this.setState({ slideNumber: newIndex })
