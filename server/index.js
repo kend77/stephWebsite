@@ -36,13 +36,7 @@ if (module === require.main) {
   */
 
   const PORT = 3001
-
-  const db = require('../db')
-
-  db.sync()
-  .then(() => {
-    console.log('db synced')
+    console.log('connection proxied')
     app.listen(PORT, () => console.log(`server listening on port ${PORT}`))
-  })
-  .catch(err => console.log(err))
+
 }
