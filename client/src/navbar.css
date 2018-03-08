@@ -1,0 +1,155 @@
+#navbar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#nav-options {
+	padding-left: 0%;
+	margin-bottom: 2vh;
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.divider {
+	width: 55%;
+	background-color:rgb(80,80,80);
+	opacity: .15;
+}
+
+#header {
+	text-decoration: none;
+	color: rgb(80,80,80);
+	margin: 0;
+	padding: 0;
+}
+
+#logo {
+	margin-bottom: 5%;
+	margin-top: 8%;
+	font-size: 2.7em;
+}
+
+.nav-item {
+	opacity: .6;
+	text-decoration: none;
+	color: rgb(80,80,80);
+	margin-right: 1em;
+	font-size: 140%;
+}
+
+.nav-item:hover {
+	background-color: rgb(150,150,150);
+	color: rgb(255, 255, 255);
+	opacity: 1;
+}
+
+
+.nav-item.active {
+	background-color: rgb(150,150,150);
+	color: rgb(255, 255, 255);
+	opacity: 1;
+}
+
+.nav-item-separator {
+	text-decoration: none;
+	color: rgb(80,80,80);
+	margin-right: 1em;
+	font-size: 125%;
+}
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+		#navbar {
+			display: flex;
+			flex-direction: row;
+			margin: 5vw 3vw 2vw;
+		}
+		#logo {
+			margin: 0;
+			padding: 0;
+			font-size: 2em;
+		}
+		#hamburger {
+			margin-right: 14.3%;
+		}
+		#nohamburger {
+			margin-right: 14.3%;
+			opacity: 0;
+		}
+		#nav-options {
+			display: none;
+		}
+		#sidebar {
+			background: rgb(80,80,80);
+			opacity: .95;
+			font-size: 1em;
+			padding: 4% 0%;
+		}
+		.mobile-nav-item.active {
+			background-color: rgb(255, 255, 255);
+		}
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+		#navbar {
+			display: flex;
+			flex-direction: row;
+			margin: 2vh 3vw;
+		}
+
+		#logo {
+			margin: 0;
+			padding: 0;
+			font-size: 2em;
+
+		}
+		#hamburger {
+			margin-right: 28%;
+		}
+		#nav-options {
+			display: none;
+		}
+		#sidebar {
+			background: rgb(80,80,80);
+		}
+}
+
+/* iPad */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2) {
+		.nav-item {
+			opacity: .6;
+			text-decoration: none;
+			color: rgb(80,80,80);
+			margin-right: 1em;
+			font-size: 150%;
+		}
+		.nav-item:hover {
+			background-color: rgb(150,150,150);
+			color: rgb(255, 255, 255);
+			opacity: 1;
+		}
+
+		.nav-item-separator {
+			text-decoration: none;
+			color: rgb(80,80,80);
+			margin-right: 1em;
+			font-size: 125%;
+		}
+}

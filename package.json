@@ -1,24 +1,32 @@
 {
-  "name": "stephanie",
-  "version": "0.1.0",
+  "name": "imageserver",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "eslint": "^4.13.1",
-    "eslint-config-fullstack": "^3.0.0",
-    "eslint-plugin-react": "^7.5.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.17",
-    "react-slick": "^0.16.0",
-    "semantic-ui-react": "^0.77.1",
-    "slick-carousel": "^1.8.1"
+    "babel-core": "6.14.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "fs": "0.0.2",
+    "nodemon": "^1.17.1",
+    "pg": "^7.4.1",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.35.2",
+    "sql.js": "0.3.2",
+    "volleyball": "^1.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "nodemon start-client.js",
+    "dev": "echo \"This command has been deprecated. Use 'npm start'\" && exit 1",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "concurrently": "3.1.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "14.1.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "4.0.0",
+    "eslint-plugin-react": "6.9.0"
   }
 }
