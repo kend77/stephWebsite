@@ -14,28 +14,29 @@
     "sql.js": "0.3.2",
     "volleyball": "^1.4.1"
   },
-  "engines": {
-    "node": "8.9.x"
-  },
   "scripts": {
-    "start": "node server",
+    "start": "nodemon server",
     "server": "nodemon server/index.js",
     "client": "nodemon start-client.js",
     "dev": "echo \"This command has been deprecated. Use 'npm start'\" && exit 1",
     "lint": "eslint .",
     "heroku-postbuild": "cd client/ && yarn && yarn --only=dev --no-shrinkwrap && yarn build",
-    "deploy": "git push heroku master"
+    "deploy": "git push heroku master",
+    "test": "mocha"
   },
   "cacheDirectories": [
     "node_modules",
     "client/node_modules"
   ],
   "devDependencies": {
+    "chai": "^4.1.2",
     "concurrently": "3.1.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "14.1.0",
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-jsx-a11y": "4.0.0",
-    "eslint-plugin-react": "6.9.0"
+    "eslint-plugin-react": "6.9.0",
+    "mocha": "^5.0.4",
+    "supertest": "^3.0.0"
   }
 }
