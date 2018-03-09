@@ -23,7 +23,7 @@
     "client": "nodemon start-client.js",
     "dev": "echo \"This command has been deprecated. Use 'npm start'\" && exit 1",
     "lint": "eslint .",
-    "heroku-postbuild": "cd react-ui/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "cd client/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "cacheDirectories": [
     "node_modules",
