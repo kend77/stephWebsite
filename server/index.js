@@ -15,10 +15,10 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = app
   .use(bodyParser.urlencoded({ extended: true }))
   .use(bodyParser.json())
-  .use(express.static(resolve(__dirname, '../react-ui/build'))) // Serve static files from ../public
+  .use(express.static(resolve(__dirname, '../client/build'))) // Serve static files from ../public
   .use('/api', require('./api')) // Serve our api
   .get('*', (req, res) => res.redirect('/'))
-  .get('/*', (_, res) => res.sendFile(resolve(__dirname, '..', '../react-ui/build', 'index.html'))) // Send index.html for any other requests.
+  .get('/*', (_, res) => res.sendFile(resolve(__dirname, '..', '../client/build', 'index.html'))) // Send index.html for any other requests.
 
   // notice the use of `_` as the first parameter above. This is a pattern for parameters that must exist, but you don't use or reference (or need) in the function body that follows.
 
