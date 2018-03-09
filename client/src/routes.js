@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import App from './App'
 import Carousel from './Carousel'
 import About from './About'
+import Home from './Home'
 import createBrowserHistory from 'history/createBrowserHistory'
 import MobileApp from './MobileApp';
 
@@ -31,6 +32,7 @@ class Routes extends Component {
       { width < 750 ?
         <MobileApp>
           <Switch>
+            <Route exact path="/" component={Home} />
             <Route path="/schumacher" render={() => <Carousel folder="schumacher" />} />
             <Route path="/about" component={About} />
           </Switch>
@@ -38,6 +40,7 @@ class Routes extends Component {
         :
         <App>
           <Switch>
+            <Route exact path="/" component={Home} />
             <Route path="/schumacher" render={() => <Carousel folder="schumacher" />} />
             <Route path="/about" component={About} width={width} />
           </Switch>

@@ -1,7 +1,6 @@
 import React from 'react'
 import './navbar.css'
 import { NavLink } from 'react-router-dom'
-import { Divider } from 'semantic-ui-react'
 
 
 const NavBar = () => {
@@ -15,11 +14,12 @@ const NavBar = () => {
 		<li className="nav-item-separator">|</li>
 		<NavLink  className="nav-item" to="/theauthentics"><li>the authentics</li></NavLink>
 		<li className="nav-item-separator">|</li>
+		<NavLink  className="nav-item" to="/ad"><li>architectural digest</li></NavLink>
+		<li className="nav-item-separator">|</li>
 		<NavLink  className="nav-item" to="/self"><li>self</li></NavLink>
 		<li className="nav-item-separator">|</li>
 		<NavLink className="nav-item" to="/about"><li>about</li></NavLink>
 	</ul>
-	<Divider className="divider" fitted />
 	</div>
 	)
 }

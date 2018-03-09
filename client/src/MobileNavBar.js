@@ -46,6 +46,11 @@ class MobileNavBar extends Component {
             the authentics
           </Menu.Item>
           </NavLink>
+          <NavLink to="/ad">
+          <Menu.Item name="home">
+            architectural digest
+          </Menu.Item>
+          </NavLink>
           <NavLink to="/self">
           <Menu.Item name="home">
             self

@@ -39,7 +39,8 @@
 	text-decoration: none;
 	color: rgb(80,80,80);
 	margin-right: 1em;
-	font-size: 140%;
+	font-size: 120%;
+	letter-spacing: .5px;
 }
 
 .nav-item:hover {
