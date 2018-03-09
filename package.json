@@ -14,6 +14,9 @@
     "sql.js": "0.3.2",
     "volleyball": "^1.4.1"
   },
+  "engines": {
+    "node": "8.9.x"
+  },
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon server/index.js",
