@@ -20,7 +20,6 @@ class Carousel extends Component {
   componentDidMount() {
     axios.get(`/api/${this.props.folder}`)
       .then(res => {
-        console.log(res.data)
         this.setState({numImages: res.data.length})
       })
   }
@@ -34,7 +33,6 @@ class Carousel extends Component {
   render() {
     const { folder } = this.props;
     const { slideNumber, currentSlide, numImages } = this.state;
-    console.log(numImages)
     document.title = `stephanie diaz-${folder}`;
     const settings = {
       customPaging: (i) => {
