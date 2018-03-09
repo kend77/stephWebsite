@@ -27,7 +27,7 @@
   },
   "cacheDirectories": [
     "node_modules",
-    "react-ui/node_modules"
+    "client/node_modules"
   ],
   "devDependencies": {
     "concurrently": "3.1.0",
