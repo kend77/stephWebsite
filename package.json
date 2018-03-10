@@ -22,7 +22,8 @@
     "lint": "eslint .",
     "heroku-postbuild": "cd client/ && yarn && yarn --only=dev --no-shrinkwrap && yarn build",
     "deploy": "git push heroku master",
-    "test": "mocha"
+    "test": "mocha",
+    "develop": "concurrently \"npm run server\" \"npm run client\""
   },
   "cacheDirectories": [
     "node_modules",
