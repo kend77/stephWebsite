@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Slider from 'react-slick'
 import './carousel.css'
 import { withRouter } from 'react-router'
-import { Modal, Image } from 'semantic-ui-react'
+import { Modal, Image, Loader } from 'semantic-ui-react'
 import axios from 'axios'
 
 class Carousel extends Component {
@@ -13,7 +13,8 @@ class Carousel extends Component {
     this.state = {
       slideNumber: 0,
       currentSlide: 0,
-      numImages: 0
+      numImages: 0,
+      imagesLoaded: false
     }
     this.onOpen = this.onOpen.bind(this)
   }
@@ -21,6 +22,10 @@ class Carousel extends Component {
     axios.get(`/api/${this.props.folder}`)
       .then(res => {
         this.setState({numImages: res.data.length})
+      })
+
+      window.addEventListener('load', () => {
+        this.setState({ imagesLoaded: true })
       })
   }
   onOpen() {
@@ -32,7 +37,8 @@ class Carousel extends Component {
 
   render() {
     const { folder } = this.props;
-    const { slideNumber, currentSlide, numImages } = this.state;
+    const { slideNumber, currentSlide, numImages, imagesLoaded } = this.state;
+    console.log(imagesLoaded)
     document.title = `stephanie diaz-${folder}`;
     const settings = {
       customPaging: (i) => {
@@ -65,6 +71,7 @@ class Carousel extends Component {
     };
 
     return (
+      imagesLoaded ?
       <div id="carousel">
         <Slider ref={c => {this.slider = c}} {...settings} className="carousel-item">
           {new Array(numImages).fill(0).map((result, index) => index + 1).map(picNumber => {
@@ -92,6 +99,9 @@ class Carousel extends Component {
             )
           })}
         </Slider>
+      </div> :
+      <div>
+          <Loader active={true} />
       </div>
     );
   }
