@@ -1,6 +1,7 @@
 import React from 'react'
 import './navbar.css'
 import { NavLink } from 'react-router-dom'
+import { withRouter } from 'react-router'
 
 
 const NavBar = () => {
@@ -24,4 +25,4 @@ const NavBar = () => {
 	)
 }
 
-export default NavBar;
+export default withRouter(NavBar);

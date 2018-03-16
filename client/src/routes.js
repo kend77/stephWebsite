@@ -42,6 +42,7 @@ class Routes extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/schumacher" render={() => <Carousel folder="schumacher" />} />
+            <Route path="/patterson" render={() => <Carousel folder="patterson" />} />
             <Route path="/about" component={About} width={width} />
           </Switch>
         </App>
